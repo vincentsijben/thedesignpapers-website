@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: blue;
+        }
+        .container {
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .thumb{
+            overflow: hidden;
+            border-radius: 20px;
+            background: white;
+            min-height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Design Papers hub</h1>
+
+    <div class="container" id="thumb-cont">
+
+    </div>
+   
+    
+    <script>
+
+    //example array student work urls
+    const urls = [
+    "https://mia-mmt1-2122.github.io/city-pop-milavberkel/",
+    "https://jsonplaceholder.typicode.com/comments/2",
+    "https://jsonplaceholder.typicode.com/comments/3",
+    "https://mia-mmt4-2122.github.io/sharing-like-a-pro-Juulkeuuuh/"
+    ];
+
+    //global vars
+    const container = document.querySelector('#thumb-cont');
+
+    (async () => {
+        // await all urls from array
+        const response = await Promise.all(urls.map(u => fetch(u)))
+       
+        // loop trough response
+        for (let i = 0; i < response.length; i++) {
+            
+            // build loop vars
+            const text = await response[i].text();
+            const url = response[i].url;
+            const urlArticle = url + '/article.html';
+            const titleTag = text.match(/(?<=\<title>).*(?=\<\/title>)/);
+            const heading = text.match(/(?<=\<h1>).*(?=\<\/h1>)/);
+            const socialCard = text.match(/<meta name="twitter:image"[^>]+content="([^")]*)"/);
+            
+            // build thumb nodes
+            const thumb = document.createElement("div");
+            const h3 = document.createElement("h3");
+            const img = document.createElement("img");
+            const link = document.createElement("a");
+           
+            h3.innerHTML = heading;
+            thumb.className = "thumb";
+            container.append(thumb);
+            link.href = url;
+           
+
+            // build img
+            if (socialCard) {
+                img.src = socialCard[1];
+                thumb.append(img);
+            } else {
+                img.src = 'https://placekitten.com/g/400/200';
+                thumb.append(img);
+            }
+            // build heading
+            // if (heading){
+            //     document.body.append(h2);
+            // }
+            // build heading
+            if (titleTag){
+                thumb.append(h3);
+            }
+            if (url){
+                thumb.append(link);
+            }
+            
+
+            
+        }
+
+    })()
+
+</script>
+</body>
+</html>
