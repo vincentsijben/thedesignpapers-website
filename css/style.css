@@ -139,9 +139,7 @@ h4{
 #logo{
     margin: 0 50px 82px;
 }
-header h1{
-    float: left; 
-}
+
 header h1:after{
     content: ".\00a0"; /* space after h1 */
 }
