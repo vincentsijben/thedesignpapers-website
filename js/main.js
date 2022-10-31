@@ -82,6 +82,8 @@
                     document.querySelector("#classes").appendChild(li);
                     // add class to li's "visible"
                     li.classList.add("visible");
+                    // place the text inside li in a an a and add the urlArticle as href
+                    li.innerHTML = `<a href="${urlArticle}">${creator}</a>`;
 
                     // arrange names in #classes in alphabetical order
                     const ul = document.querySelector("#classes");

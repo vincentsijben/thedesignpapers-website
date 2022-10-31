@@ -195,6 +195,10 @@ main{
     margin: 0 50px 0 82px;
 }
 
+header{
+    padding:0 20px;
+}
+
 header h1:after{
     content: ".\00a0"; /* space after h1 */
 }
@@ -211,7 +215,6 @@ header h3 span{
 #header-content{
     position: relative;
     margin-bottom: 8em;
-    padding: 0 20px;
 }
 #header-content:after{
     content:url(../assets/1.svg);
