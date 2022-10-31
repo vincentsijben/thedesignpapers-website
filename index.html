@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <title>The Design Papers</title>
     <link rel="stylesheet" href="css/style.css">
+    
 
 </head>
 <body>
@@ -26,6 +31,24 @@
         <div id="filter" class="container-grid container-flex">
             <h3>Kies categorie</h3>
             <ul>
+                <!-- create 4 checkboxes -->
+                <li>
+                    <input type="checkbox" name="filter" value="art" id="filter-art">
+                    <label class="btn filter-button cat-art" for="filter-art"><span>Wat is ontwerpen</span></label>
+                </li>
+                <li>
+                    <input type="checkbox" name="filter" value="design" id="filter-design">
+                    <label  class="btn filter-button cat-design" for="filter-design"><span>Design, technologie en media</span></label>
+                </li>
+                <li>
+                    <input type="checkbox" name="filter" value="tech" id="filter-tech">
+                    <label class="btn filter-button cat-tech" for="filter-tech"><span>De gebruiker in het ontwerpproces</span></label>
+                </li>
+                <li>
+                    <input type="checkbox" name="filter" value="eth" id="filter-eth">
+                    <label  class="btn filter-button cat-eth" for="filter-eth"><span>Ethiek in het ontwerpproces</span></label>
+                </li>
+<!-- 
                 <li>
                     <button class="btn filter-button cat-art" data-filter="Art">Kunst</button>
                 </li>
@@ -33,16 +56,16 @@
                     <button class="btn filter-button cat-design" data-filter="Design">Design</button>
                 </li>
                 <li>
-                    <button class="btn filter-button cat-tech" data-filter="Technologie">Technologie</button>
+                    <button class="btn filter-button cat-tech" data-filter="Tech">Technologie</button>
                 </li>
                 <li>
                     <button class="btn filter-button cat-eth" data-filter="Ethiek">Ethiek</button>
-                </li>
+                </li> -->
                 </ul>
         </div>
         <div id="search" class="container-grid container-flex">
             
-            <input type="text" id="search-btn" placeholder="Zoek op naam of studentnummer">
+            <input type="text" id="search-btn" placeholder="Zoek op naam van student">
 
         </div>
 
@@ -53,9 +76,14 @@
                 <!-- <li><a href="#">Student naam</a></li> -->
             </ul>
         </div>
-        <div id="thumb-wrapper">
-            
+        <div id="thumb-wrapper"> 
+            <div class="thumb-cont thumb-cont-first container-grid container-flex"></div>
+            <div class="thumb-cont thumb-cont-rest container-grid container-flex"></div>
         </div>
+
+        <!-- <div id="more-btn" class="container-grid container-flex">
+            <button class="btn">Meer artikelen</button>
+        </div> -->
     </main>
 
     <script src="js/main.js"></script>

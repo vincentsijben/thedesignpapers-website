@@ -7,22 +7,18 @@
             "https://mia-mmt4-2122.github.io/sharing-like-a-pro-Juulkeuuuh/",
             "https://vincentsijben.github.io/will-wacky-website/",
             "https://mia-mmt1-2122.github.io/city-pop-milavberkel/",
+            "https://mia-mmt1-2122.github.io/city-pop-milavberkel/",
             "https://jsonplaceholder.typicode.com/comments/2",
             "https://jsonplaceholder.typicode.com/comments/3",
             "https://mia-mmt4-2122.github.io/sharing-like-a-pro-Juulkeuuuh/",
             "https://vincentsijben.github.io/will-wacky-website/",
             "https://mia-mmt1-2122.github.io/city-pop-milavberkel/",
-            "https://jsonplaceholder.typicode.com/comments/2",
-            "https://jsonplaceholder.typicode.com/comments/3",
-            "https://mia-mmt4-2122.github.io/sharing-like-a-pro-Juulkeuuuh/",
-            "https://vincentsijben.github.io/will-wacky-website/", 
-            "https://mia-mmt4-2122.github.io/sharing-like-a-pro-Juulkeuuuh/",
-            "https://vincentsijben.github.io/will-wacky-website/",
             "https://mia-mmt1-2122.github.io/city-pop-milavberkel/",
             "https://jsonplaceholder.typicode.com/comments/2",
             "https://jsonplaceholder.typicode.com/comments/3",
             "https://mia-mmt4-2122.github.io/sharing-like-a-pro-Juulkeuuuh/",
-            "https://vincentsijben.github.io/will-wacky-website/"
+            "https://vincentsijben.github.io/will-wacky-website/",
+            "https://mia-mmt1-2122.github.io/city-pop-milavberkel/"
             ];
         
             //global vars
@@ -34,7 +30,7 @@
             
                 // loop trough response with a maximum of 18 items
     
-                for (let i = 0; i < 18; i++) {
+                for (let i = 0; i < response.length; i++) {
                     // random function mix max
                     function randomIntFromInterval(min, max) { 
                         return Math.floor(Math.random() * (max - min + 1) + min)
@@ -67,10 +63,7 @@
                     // // h4 category
                     const h4 = document.createElement("h4");
                     h4.innerText = category;
-                    // check if innerText is "tech", if so, add class to parent
-                    
-                   
-        
+         
                     // // h3 article title
                     const h3 = document.createElement("h3");
                     h3.innerText = title;
@@ -89,7 +82,6 @@
                     document.querySelector("#classes").appendChild(li);
                     // add class to li's "visible"
                     li.classList.add("visible");
-                    
 
                     // arrange names in #classes in alphabetical order
                     const ul = document.querySelector("#classes");
@@ -97,16 +89,6 @@
                     const sorted = Array.from(items).sort((a, b) => a.textContent.localeCompare(b.textContent));
                     ul.innerHTML = "";
                     ul.append(...sorted);
-                   
-
-
-        
-                    // // url article
-                    // const a = document.createElement("a");
-                    // a.setAttribute("href", urlArticle);
-                    // a.innerText = creator;
-                    // thumb.appendChild(a);
-                    // container.append(thumb);
     
                     // build thumb nodes 
                     const thumb = document.createElement("a");
@@ -139,28 +121,61 @@
                             e.preventDefault();
                         });
                     }
-           
-                    // wrap every 9 thumb inside thumb-cont
-                    if (i % 9 === 0) {
-                        const thumbCont = document.createElement("div");
-                        thumbCont.classList.add("thumb-cont");
-                        thumbCont.classList.add("container-grid");
-                        thumbCont.classList.add("container-flex");
-                        thumbCont.appendChild(thumb);
-                        container.appendChild(thumbCont);
+                    
+                    // append the first 8 thumbs to .thumb-cont-first
+                    if (i < 8) {
+                        document.querySelector(".thumb-cont-first").appendChild(thumb);
                     } else {
-                        const thumbCont = document.querySelector(".thumb-cont:last-child");
-                        thumbCont.appendChild(thumb);
+                        document.querySelector(".thumb-cont-rest").appendChild(thumb);
                     }
-    
-    
-    
+
+                    // after the 3rd thumb, add div with the class extra (for text item)
+                    if (i === 2) {
+                        const extra = document.createElement("div");
+                        extra.classList.add("extra");
+                        extra.classList.add("thumb");
+                        const thumbCont = document.querySelector(".thumb-cont");
+                        thumbCont.appendChild(extra);
                         
+                        // add 5 different spans with class and text
+                        const span1 = document.createElement("span");
+                        span1.innerText = "Design Research";
+
+                        const span2 = document.createElement("span");
+                        span2.innerText = "Writting Skills";
+                        
+
+                        const span3 = document.createElement("span");
+                        span3.innerText = "Photography";
+                        
+
+                        const span4 = document.createElement("span");
+                        span4.innerText = "Visual Design";
+
+
+                        const span5 = document.createElement("span");
+                        span5.innerText = "Multimedia & Technology";
+                        
+                        extra.appendChild(span1);
+                        extra.appendChild(span2);
+                        extra.appendChild(span3);
+                        extra.appendChild(span4);
+                        extra.appendChild(span5); 
+                    }
+                    
+
+                    // //  when more-btn is clicked append 9 more thumb
+                    // document.querySelector("#more-btn").addEventListener("click", function() {
+                    //     const thumbCont = document.querySelector(".thumb-cont:last-child");
+                    //     thumbCont.appendChild(thumb);
+                    // }
+                    // )
+
     
-    
-                }
-                 // loop trough all divs with the class thumb-cont, only after the first thumb-cont add a div
-                 
+                } // end of loop
+
+
+                // loop trough all divs with the class thumb-cont, only after the first thumb-cont add a div
                 const thumbConts = document.querySelectorAll(".thumb-cont");
                 for (let i = 0; i < thumbConts.length; i++) {
                        
@@ -208,17 +223,36 @@
                     }
                 });
 
-    
-              
-                
-    
+                // when a checkbox in #filter is checked compare the value of the checked checkbox with one of the classes in all the .thumb. Only show .thumb's that have the same class as the checked checkbox
+                const filter = document.querySelector("#filter");
+                filter.addEventListener("change", function() {
+                    const checkboxes = document.querySelectorAll("#filter input[type=checkbox]:checked");
+                    const thumbs = document.querySelectorAll(".thumb");
+                    for (let i = 0; i < thumbs.length; i++) {
+                        thumbs[i].classList.add("hidden");
+                        for (let j = 0; j < checkboxes.length; j++) {
+                            if (thumbs[i].classList.contains(checkboxes[j].value)) {
+                                thumbs[i].classList.remove("hidden");
+                            }
+                        }
+                    }
+                }
+                );
+                // if no checkbox is checked, show all .thumb's
+                filter.addEventListener("change", function() {
+                    const checkboxes = document.querySelectorAll("#filter input[type=checkbox]:checked");
+                    const thumbs = document.querySelectorAll(".thumb");
+                    if (checkboxes.length == 0) {
+                        for (let i = 0; i < thumbs.length; i++) {
+                            thumbs[i].classList.remove("hidden");
+                        }
+                    }
+                }
+                );
+
+            
                
-    
                 
-    
-    
-               
-        
             })()
     
            
