@@ -4,101 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        body{
-            background: blue;
-        }
-        .container {
-            gap: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .thumb{
-            overflow: hidden;
-            border-radius: 20px;
-            background: white;
-            min-height: 400px;
-            width: 400px;
-        }
-    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <title>The Design Papers</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>The Design Papers hub</h1>
+    <header class="container-grid container-padding">
+            <img id="logo" src="assets/mia-logo.svg" alt="Maastricht Institute of Farts">
+            <h3><span>7 november 2022</span> Verzameld eindwerk periode 1.1 van studenten Communication & Multimedia Design / Zuyd Hogeschool </h3>
+            <h1>The Design Papers</h1>
+            <h2>Een verzameling artikelen over betekenisvol ontwerpen. Vier thema’s zijn onderzocht door 1e jaars studenten Communication en Multimedia Design, Zuyd Hogeschool Maastricht. Hun eerste uitdaging in het doen van onderzoek, het maken van content en het ontwerpen en ontwikkelen van een digitaal medium. Op weg naar een designtoekomst.</h2>
+    </header>
 
-    <div class="container" id="thumb-cont">
-
-    </div>
-   
-    
-    <script>
-
-    //example array student work urls
-    const urls = [
-    "https://mia-mmt1-2122.github.io/city-pop-milavberkel/",
-    "https://jsonplaceholder.typicode.com/comments/2",
-    "https://jsonplaceholder.typicode.com/comments/3",
-    "https://mia-mmt4-2122.github.io/sharing-like-a-pro-Juulkeuuuh/"
-    ];
-
-    //global vars
-    const container = document.querySelector('#thumb-cont');
-
-    (async () => {
-        // await all urls from array
-        const response = await Promise.all(urls.map(u => fetch(u)))
-       
-        // loop trough response
-        for (let i = 0; i < response.length; i++) {
+    <main>
+        <div id="filter" class="container-grid container-flex container-padding">
+            <h3>Kies categorie</h3>
+            <ul>
+                
+                <li>
+                    <input type="checkbox" name="filter" value="art" id="filter-art">
+                    <label class="btn filter-button cat-art" for="filter-art"><span>Wat is ontwerpen</span></label>
+                </li>
+                <li>
+                    <input type="checkbox" name="filter" value="design" id="filter-design">
+                    <label  class="btn filter-button cat-design" for="filter-design"><span>Design, technologie en media</span></label>
+                </li>
+                <li>
+                    <input type="checkbox" name="filter" value="tech" id="filter-tech">
+                    <label class="btn filter-button cat-tech" for="filter-tech"><span>De gebruiker in het ontwerpproces</span></label>
+                </li>
+                <li>
+                    <input type="checkbox" name="filter" value="eth" id="filter-eth">
+                    <label  class="btn filter-button cat-eth" for="filter-eth"><span>Ethiek in het ontwerpproces</span></label>
+                </li>   
+                </ul>
+        </div>
+        <div id="search" class="container-grid container-flex container-padding">
             
-            // build loop vars
-            const text = await response[i].text();
-            const url = response[i].url;
-            const urlArticle = url + '/article.html';
-            const titleTag = text.match(/(?<=\<title>).*(?=\<\/title>)/);
-            const heading = text.match(/(?<=\<h1>).*(?=\<\/h1>)/);
-            const socialCard = text.match(/<meta name="twitter:image"[^>]+content="([^")]*)"/);
-            
-            // build thumb nodes
-            const thumb = document.createElement("div");
-            const h3 = document.createElement("h3");
-            const img = document.createElement("img");
-            const link = document.createElement("a");
-           
-            h3.innerHTML = heading;
-            thumb.className = "thumb";
-            container.append(thumb);
-            link.href = url;
-           
+            <input type="text" id="search-btn" placeholder="Zoek op naam van student">
 
-            // build img
-            if (socialCard) {
-                img.src = socialCard[1];
-                thumb.append(img);
-            } else {
-                img.src = 'https://placekitten.com/g/400/200';
-                thumb.append(img);
-            }
-            // build heading
-            // if (heading){
-            //     document.body.append(h2);
-            // }
-            // build heading
-            if (titleTag){
-                thumb.append(h3);
-            }
-            if (url){
-                thumb.append(link);
-            }
-            
+        </div>
 
-            
-        }
 
-    })()
+        <div id="student-list" class="container-grid container-flex container-padding">
+            <h3>Kies student</h3>
+            <ul>
+                <!-- <li><a href="#">Student naam</a></li> -->
+            </ul>
+        </div>
+        <div id="thumb-wrapper"> 
+            <div class="thumb-cont thumb-cont-first container-grid container-flex container-padding"></div>
+            <div class="thumb-cont thumb-cont-rest container-grid container-flex container-padding"></div>
+        </div>
+        <!-- <div id="more-btn" class="container-grid container-flex">
+            <button class="btn">Meer artikelen</button>
+        </div> -->
+    </main>
 
-</script>
+    <script src="js/main.js"></script>
 </body>
 </html>
