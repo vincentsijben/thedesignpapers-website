@@ -10,28 +10,20 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest">
     <title>The Design Papers</title>
     <link rel="stylesheet" href="css/style.css">
-    
-
 </head>
 <body>
-    <header>
-        <div id="header-data" class="container-full container-flex">
+    <header class="container-grid container-padding">
             <img id="logo" src="assets/mia-logo.svg" alt="Maastricht Institute of Farts">
-            <div class="container-grid container-grid-flex-item-center">
-                <h3><span>7 november 2022</span> Verzameld eindwerk periode 1.1 van studenten Communication & Multimedia Design / Zuyd Hogeschool </h3>
-            </div>
-        </div>
-        <div id="header-content" class="container-grid clearfix">
+            <h3><span>7 november 2022</span> Verzameld eindwerk periode 1.1 van studenten Communication & Multimedia Design / Zuyd Hogeschool </h3>
             <h1>The Design Papers</h1>
             <h2>Een verzameling artikelen over betekenisvol ontwerpen. Vier thema’s zijn onderzocht door 1e jaars studenten Communication en Multimedia Design, Zuyd Hogeschool Maastricht. Hun eerste uitdaging in het doen van onderzoek, het maken van content en het ontwerpen en ontwikkelen van een digitaal medium. Op weg naar een designtoekomst.</h2>
-        </div>
     </header>
 
     <main>
-        <div id="filter" class="container-grid container-flex">
+        <div id="filter" class="container-grid container-flex container-padding">
             <h3>Kies categorie</h3>
             <ul>
-                <!-- create 4 checkboxes -->
+                
                 <li>
                     <input type="checkbox" name="filter" value="art" id="filter-art">
                     <label class="btn filter-button cat-art" for="filter-art"><span>Wat is ontwerpen</span></label>
@@ -47,40 +39,26 @@
                 <li>
                     <input type="checkbox" name="filter" value="eth" id="filter-eth">
                     <label  class="btn filter-button cat-eth" for="filter-eth"><span>Ethiek in het ontwerpproces</span></label>
-                </li>
-<!-- 
-                <li>
-                    <button class="btn filter-button cat-art" data-filter="Art">Kunst</button>
-                </li>
-                <li>
-                    <button class="btn filter-button cat-design" data-filter="Design">Design</button>
-                </li>
-                <li>
-                    <button class="btn filter-button cat-tech" data-filter="Tech">Technologie</button>
-                </li>
-                <li>
-                    <button class="btn filter-button cat-eth" data-filter="Ethiek">Ethiek</button>
-                </li> -->
+                </li>   
                 </ul>
         </div>
-        <div id="search" class="container-grid container-flex">
+        <div id="search" class="container-grid container-flex container-padding">
             
             <input type="text" id="search-btn" placeholder="Zoek op naam van student">
 
         </div>
 
 
-        <div id="student-list" class="container-grid container-flex">
+        <div id="student-list" class="container-grid container-flex container-padding">
             <h3>Kies student</h3>
-            <ul id="classes">
+            <ul>
                 <!-- <li><a href="#">Student naam</a></li> -->
             </ul>
         </div>
         <div id="thumb-wrapper"> 
-            <div class="thumb-cont thumb-cont-first container-grid container-flex"></div>
-            <div class="thumb-cont thumb-cont-rest container-grid container-flex"></div>
+            <div class="thumb-cont thumb-cont-first container-grid container-flex container-padding"></div>
+            <div class="thumb-cont thumb-cont-rest container-grid container-flex container-padding"></div>
         </div>
-
         <!-- <div id="more-btn" class="container-grid container-flex">
             <button class="btn">Meer artikelen</button>
         </div> -->

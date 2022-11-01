@@ -1,0 +1,22 @@
+/*grid etc */
+ 
+
+main{
+    overflow-x: hidden;
+ }
+ .container-padding{
+    padding:0 var(--body-padding);
+ }
+ .container-full{
+     width: 100%;
+ }
+ .container-flex{
+     display: flex;
+     justify-content:space-evenly;
+     align-items: center;
+ }
+ 
+ .container-grid{
+     max-width: 1200px;
+     margin: 0 auto;
+ }

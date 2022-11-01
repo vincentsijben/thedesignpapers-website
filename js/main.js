@@ -79,14 +79,14 @@
                     // place all creator names inside the li of #classes
                     const li = document.createElement("li");
                     li.innerText = creator;
-                    document.querySelector("#classes").appendChild(li);
+                    document.querySelector("#student-list ul").appendChild(li);
                     // add class to li's "visible"
                     li.classList.add("visible");
                     // place the text inside li in a an a and add the urlArticle as href
                     li.innerHTML = `<a href="${urlArticle}">${creator}</a>`;
 
                     // arrange names in #classes in alphabetical order
-                    const ul = document.querySelector("#classes");
+                    const ul = document.querySelector("#student-list ul");
                     const items = ul.querySelectorAll("li");
                     const sorted = Array.from(items).sort((a, b) => a.textContent.localeCompare(b.textContent));
                     ul.innerHTML = "";
@@ -199,11 +199,11 @@
                     }
                 }
 
-                // when user is typing in search-btn to filter the names in #classes
+                // when user is typing in search-btn to filter the names in student-list
                 const searchBtn = document.querySelector("#search-btn");
                 searchBtn.addEventListener("keyup", function() {
                     const filter = searchBtn.value.toUpperCase();
-                    const li = document.querySelector("#classes").getElementsByTagName("li");
+                    const li = document.querySelector("#student-list ul").getElementsByTagName("li");
                     for (let i = 0; i < li.length; i++) {
                         const txtValue = li[i].textContent || li[i].innerText;
                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
