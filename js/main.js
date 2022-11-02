@@ -91,7 +91,7 @@ let repos = [
     "https://mia-mmt1-2223.github.io/final-LaurynWalpole/",
     "https://mia-mmt1-2223.github.io/final-semdv/",
     "https://mia-mmt1-2223.github.io/final-Jorgos-Intemann/",
-    "https://mia-mmt1-2223.github.io/final-Iris-kuipers/",
+    "https://mia-mmt1-2223.github.io/final-Iris-Kuipers/",
     "https://mia-mmt1-2223.github.io/final-Lisabenedik/",
     "https://mia-mmt1-2223.github.io/final-SemvanderSluijs/",
     "https://mia-mmt1-2223.github.io/final-casvanmulken/",
