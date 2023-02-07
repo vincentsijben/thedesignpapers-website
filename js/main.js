@@ -1,4 +1,3 @@
-
 let repos = [
     //"https://mia-mmt1-2223.github.io/final-vincentsijben/",
     "https://mia-mmt1-2223.github.io/final-Am8lie/",
@@ -141,7 +140,7 @@ function randomIntFromInterval(min, max) {
         // place all creator names inside the li of #classes
         const li = document.createElement("li");
         li.innerText = creator;
-        
+
         if (creator != "[[naam]]" && creator != "Geen naam"){
             document.querySelector("#student-list ul").appendChild(li);
             // add class to li's "visible"
@@ -149,7 +148,7 @@ function randomIntFromInterval(min, max) {
             // place the text inside li in a an a and add the urlArticle as href
             li.innerHTML = `<a href="${urlArticle}">${creator}</a>`;
         }
-    
+
 
         // arrange names in #classes in alphabetical order
         const ul = document.querySelector("#student-list ul");
@@ -159,6 +158,7 @@ function randomIntFromInterval(min, max) {
         ul.append(...sorted);
 
         // build thumb nodes
+
         const thumb = document.createElement("a");
         thumb.setAttribute("href", urlArticle);
         thumb.classList.add("thumb");
@@ -166,13 +166,13 @@ function randomIntFromInterval(min, max) {
         thumb.appendChild(h4);
         thumb.appendChild(h3);
         thumb.appendChild(p);
-        
 
         // category check
         if (category.toLowerCase() == "kunst") h4.parentElement.classList.add("art");
         if (category.toLowerCase() == "technologie") h4.parentElement.classList.add("tech");
         if (category.toLowerCase() == "ontwerp") h4.parentElement.classList.add("design");
         if (category.toLowerCase() == "ethiek") h4.parentElement.classList.add("eth");
+
 
         // if the href of the thumb is a "#" the prevent default link behaviour
         if (thumb.getAttribute("href") == "#") {
@@ -189,6 +189,7 @@ function randomIntFromInterval(min, max) {
                 document.querySelector(".thumb-cont-rest").appendChild(thumb);
             }
         }   
+
 
         // after the 3rd thumb, add div with the class extra (for text item)
         if (i === 2) {
@@ -261,25 +262,25 @@ function randomIntFromInterval(min, max) {
     searchBtn.addEventListener("keyup", function () {
         const filter = searchBtn.value.toUpperCase();
         const li = document.querySelector("#student-list ul").getElementsByTagName("li");
-        
-      
+
         for (let i = 0; i < li.length; i++) {
             const txtValue = li[i].textContent || li[i].innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
 
                 // add class to li when it is visible
                 li[i].classList.add("visible");
+
                 // add class to thumb when it is visible
-               
+
             } else {
 
                 // remove class from li when it is not visible
                 li[i].classList.remove("visible");
-               
+   
 
             }
         }
-        
+
         // if input has no value, show all li's
         if (searchBtn.value == "") {
             for (let i = 0; i < li.length; i++) {
