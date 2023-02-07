@@ -5,6 +5,14 @@ body{
     background: #EDEDED;
     line-height: 1.36;
 
+    @media screen and (max-width: 780px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 420px) {
+        font-size: 12px;
+    }
+
 }
 
 h1{

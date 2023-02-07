@@ -12,4 +12,12 @@
     --logo-width: 236px;
     --logo-margin: 42px;
     --body-padding: 17px;
+
+    @media screen and (max-width: 760px) {
+        --flex-gap: 12px;
+    }
+    @media screen and (max-width: 500px) {
+        --flex-gap: 6px;
+    }
 }
+

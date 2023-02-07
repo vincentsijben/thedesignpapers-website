@@ -70,7 +70,7 @@ header{
         @media screen and (max-width: 1900px) {
             left:var(--body-padding);
         }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 640px) {
             position: relative;
             left:0;
             margin-top: 4em;
@@ -86,9 +86,10 @@ header{
             margin-left: calc(var(--logo-width) + var(--logo-margin));
             width: calc(100% - (var(--logo-width) + var(--logo-margin)));
         }
-        @media screen and (max-width: 400px) {
-            margin: 1em 0 6em;
+        @media screen and (max-width: 640px) {
+            margin: 1em 0 3em;
             text-align: left;
+            width: 100%;
         }
     }
     h1{
@@ -110,6 +111,10 @@ header{
 /* filter */
 #filter{
     margin-bottom: 6em;
+    
+    @media screen and (max-width: 400px) {
+        display: none; 
+    }
 
     /* weird ass hide 'real' checkbox */
     input[type="checkbox"]{
@@ -137,12 +142,24 @@ header{
     h3{
         display: flex;
         flex-basis: calc(100% / 5);
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+       
     }
 
     ul{
         display: flex;
         gap: var(--flex-gap);
         flex-basis: calc(100% / 5 * 4);
+       
+
+        @media screen and (max-width: 900px) {
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            justify-content: center;
+            gap: 10px;
+        }
 
         li{
             position: relative;
@@ -187,11 +204,19 @@ header{
     h3{
         display: flex;
         flex-basis: calc(100% / 5);
+        @media screen and (max-width: 660px) {
+            display: none;
+        }
     }
 
     ul{
         width:  calc(100% / 5 * 4);
         columns: 4;
+
+        @media screen and (max-width: 900px) {
+            width:  calc(100% / 2 * 2);
+            columns: 2;
+        }
         
         li {
             width: 100%;
@@ -223,6 +248,10 @@ header{
         .thumb{
             flex-grow: 0;
             flex-basis: calc(100% / 3 - var(--flex-gap));
+            @media screen and (max-width: 1000px) {
+                flex-basis: calc(100% / 2 - var(--flex-gap));
+            }
+           
         }
     }
     &:after{
@@ -252,6 +281,13 @@ header{
     background-image: url(../assets/students.png);
     background-size: cover;
     background-position: center;
+
+    @media screen and (max-width: 1900px) {
+        height: 560px;
+    }
+    @media screen and (max-width: 900px) {
+        height: 360px;
+    }
 
     .overlay{
         height: 100%;
@@ -345,6 +381,7 @@ header{
         font-weight:normal;
         line-height: 1;
         margin-bottom: 2em;
+        text-transform: lowercase; 
         &:before{
             content: "";
             height: 21px;
@@ -395,3 +432,34 @@ header{
 
 
 
+/*! 
+                                           /
+                        _,.------....___,.' ',.-.
+                     ,-'          _,.--"        |
+                   ,'         _.-'              .
+                  /   ,     ,'                   `
+                 .   /     /                     ``.
+                 |  |     .                       \.\
+       ____      |___._.  |       __               \ `.
+     .'    `---""       ``"-.--"'`  \               .  \
+    .  ,            __               `              |   .
+    `,'         ,-"'  .               \             |    L
+   ,'          '    _.'                -._          /    |
+  ,`-.    ,".   `--'                      >.      ,'     |
+ . .'\'   `-'       __    ,  ,-.         /  `.__.-      ,'
+ ||:, .           ,'  ;  /  / \ `        `.    .      .'/
+ j|:D  \          `--'  ' ,'_  . .         `.__, \   , /
+/ L:_  |                 .  "' :_;                `.'.'
+.    ""'                  """""'                    V
+ `.                                 .    `.   _,..  `
+   `,_   .    .                _,-'/    .. `,'   __  `
+    ) \`._        ___....----"'  ,'   .'  \ |   '  \  .
+   /   `. "`-.--"'         _,' ,'     `---' |    `./  |
+  .   _  `""'--.._____..--"   ,             '         |
+  | ." `. `-.                /-.           /          ,
+  | `._.'    `,_            ;  /         ,'          .
+ .'          /| `-.        . ,'         ,           ,
+ '-.__ __ _,','    '`-..___;-...__   ,.'\ ____.___.'
+ `"^--'..'   '-`-^-'"--    `-^-'`.''"""""`.,^.`.--' 
+ Vincent (L) Will (L) Erik 
+ */
