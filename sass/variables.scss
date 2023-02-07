@@ -1,0 +1,23 @@
+
+:root {
+    --cat-art: #F5D9FF;
+    --cat-design: #91FFAF;
+    --cat-tech: #F7F79D;
+    --cat-eth: #A5FCFF;
+    --main-black: #141414;
+    --font-grey: #B7B7B7;
+    --btn-radius: 41px;
+    --flex-gap: 32px;
+
+    --logo-width: 236px;
+    --logo-margin: 42px;
+    --body-padding: 17px;
+
+    @media screen and (max-width: 760px) {
+        --flex-gap: 12px;
+    }
+    @media screen and (max-width: 500px) {
+        --flex-gap: 6px;
+    }
+}
+

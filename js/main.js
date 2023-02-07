@@ -1,26 +1,27 @@
 let repos = [
+    //"https://mia-mmt1-2223.github.io/final-vincentsijben/",
     "https://mia-mmt1-2223.github.io/final-Am8lie/",
-    // "https://mia-mmt1-2223.github.io/final-AnnaFordd/",
-    // "https://mia-mmt1-2223.github.io/final-BjarneLogister/",
-    // "https://mia-mmt1-2223.github.io/final-Hamid9x/",
+    "https://mia-mmt1-2223.github.io/final-AnnaFordd/",
+    "https://mia-mmt1-2223.github.io/final-BjarneLogister/",
+    "https://mia-mmt1-2223.github.io/final-Hamid9x/",
     "https://mia-mmt1-2223.github.io/final-MAmory1A/",
     "https://mia-mmt1-2223.github.io/final-kevintnstr/",
     "https://mia-mmt1-2223.github.io/final-ChaniceMertens/",
-    // "https://mia-mmt1-2223.github.io/final-Jampot043/",
-    // "https://mia-mmt1-2223.github.io/final-RaoulVriezelaar/",
-    // "https://mia-mmt1-2223.github.io/final-2205105hassoun/",
+    "https://mia-mmt1-2223.github.io/final-Jampot043/",
+    "https://mia-mmt1-2223.github.io/final-RaoulVriezelaar/",
+    "https://mia-mmt1-2223.github.io/final-2205105hassoun/",
     "https://mia-mmt1-2223.github.io/final-robinselen/",
-    // "https://mia-mmt1-2223.github.io/final-T-Schm1t/",
+    "https://mia-mmt1-2223.github.io/final-T-Schm1t/",
     "https://mia-mmt1-2223.github.io/final-RenskeR/",
-    // "https://mia-mmt1-2223.github.io/final-TrenLeclaire/",
-    "https://mia-mmt1-2223.github.io/final-RianneOosterhuis/",
-    // "https://mia-mmt1-2223.github.io/final-PimBr/",
-    // "https://mia-mmt1-2223.github.io/final-Manar54/",
-    // "https://mia-mmt1-2223.github.io/final-BlackAirforce1sX/",
+    "https://mia-mmt1-2223.github.io/final-TrenLeclaire/",
+    "https://mia-mmt1-2223.github.io/final-rianneoosterhuis/",
+    "https://mia-mmt1-2223.github.io/final-PimBr/",
+    "https://mia-mmt1-2223.github.io/final-Manar54/",
+    "https://mia-mmt1-2223.github.io/final-BlackAirforce1sX/",
     "https://mia-mmt1-2223.github.io/final-semschlosser/",
     "https://mia-mmt1-2223.github.io/final-RobinPotthoff/",
     "https://mia-mmt1-2223.github.io/final-semueljanssen/",
-    // "https://mia-mmt1-2223.github.io/final-EviZeelen/",
+    "https://mia-mmt1-2223.github.io/final-EviZeelen/",
     "https://mia-mmt1-2223.github.io/final-BassGoossens/",
     "https://mia-mmt1-2223.github.io/final-Teun-Koolen/",
     "https://mia-mmt1-2223.github.io/final-evidirckx/",
@@ -29,18 +30,18 @@ let repos = [
     "https://mia-mmt1-2223.github.io/final-Jurgenjws/",
     "https://mia-mmt1-2223.github.io/final-FerryBa/",
     "https://mia-mmt1-2223.github.io/final-RikNacken/",
-    // "https://mia-mmt1-2223.github.io/final-McSwordsman/",
+    "https://mia-mmt1-2223.github.io/final-McSwordsman/",
     "https://mia-mmt1-2223.github.io/final-TibbeMoes/",
     "https://mia-mmt1-2223.github.io/final-Jojopro56/",
     "https://mia-mmt1-2223.github.io/final-StanRuber/",
-    // "https://mia-mmt1-2223.github.io/final-chloedejong/",
-    // "https://mia-mmt1-2223.github.io/final-BrentFijneman/",
+    "https://mia-mmt1-2223.github.io/final-chloedejong/",
+    "https://mia-mmt1-2223.github.io/final-BrentFijneman/",
     "https://mia-mmt1-2223.github.io/final-Wlipsch/",
     "https://mia-mmt1-2223.github.io/final-JVLXS/",
-    // "https://mia-mmt1-2223.github.io/final-Kimlimp/",
-    // "https://mia-mmt1-2223.github.io/final-Armoooeee/",
+    "https://mia-mmt1-2223.github.io/final-Kimlimp/",
+    "https://mia-mmt1-2223.github.io/final-Armoooeee/",
     "https://mia-mmt1-2223.github.io/final-maudmooren/",
-    // "https://mia-mmt1-2223.github.io/final-TeundeGouw/",
+    "https://mia-mmt1-2223.github.io/final-TeundeGouw/",
     "https://mia-mmt1-2223.github.io/final-leoniestomphorst/",
     "https://mia-mmt1-2223.github.io/final-RomanPijls/",
     "https://mia-mmt1-2223.github.io/final-Feemiessen/",
@@ -49,17 +50,17 @@ let repos = [
     "https://mia-mmt1-2223.github.io/final-MichJaegers/",
     "https://mia-mmt1-2223.github.io/final-Noah0D/",
     "https://mia-mmt1-2223.github.io/final-Elyadore/",
-    // "https://mia-mmt1-2223.github.io/final-JenniferStijfs/",
-    // "https://mia-mmt1-2223.github.io/final-daphneschilperoort/",
+    "https://mia-mmt1-2223.github.io/final-JenniferStijfs/",
+    "https://mia-mmt1-2223.github.io/final-daphneschilperoort/",
     "https://mia-mmt1-2223.github.io/final-DasCicada/",
-    // "https://mia-mmt1-2223.github.io/final-UncleJoe21/",
-    // "https://mia-mmt1-2223.github.io/final-JR-vanderLinden/",
+    "https://mia-mmt1-2223.github.io/final-UncleJoe21/",
+    "https://mia-mmt1-2223.github.io/final-JR-vanderLinden/",
     "https://mia-mmt1-2223.github.io/final-julieheuff/",
-    // "https://mia-mmt1-2223.github.io/final-FabriceBrandts/",
+    "https://mia-mmt1-2223.github.io/final-FabriceBrandts/",
     "https://mia-mmt1-2223.github.io/final-DaphneWehrens/",
     "https://mia-mmt1-2223.github.io/final-meikespapens/",
-    // "https://mia-mmt1-2223.github.io/final-admyre/",
-    // "https://mia-mmt1-2223.github.io/final-ajaesmail/",
+    "https://mia-mmt1-2223.github.io/final-admyre/",
+    "https://mia-mmt1-2223.github.io/final-ajaesmail/",
     "https://mia-mmt1-2223.github.io/final-Bingvanrooij/",
     "https://mia-mmt1-2223.github.io/final-DriekvanderMeulen/",
     "https://mia-mmt1-2223.github.io/final-Tallon-IVI/",
@@ -117,7 +118,7 @@ function randomIntFromInterval(min, max) {
         // if image is not found, use placeholder
         img.onerror = function () {
             this.onerror = null;
-            this.src = 'https://generative-placeholders.glitch.me/image?width=900&height=900&style=cellular-automata&cells=${rndInt}';
+            this.src = 'https://generative-placeholders.glitch.me/image?width=900&height=900&style=cellular-automata&cells=' + rndInt;
         }
 
         // // h4 category
@@ -139,11 +140,15 @@ function randomIntFromInterval(min, max) {
         // place all creator names inside the li of #classes
         const li = document.createElement("li");
         li.innerText = creator;
-        document.querySelector("#student-list ul").appendChild(li);
-        // add class to li's "visible"
-        li.classList.add("visible");
-        // place the text inside li in a an a and add the urlArticle as href
-        li.innerHTML = `<a href="${urlArticle}">${creator}</a>`;
+
+        if (creator != "[[naam]]" && creator != "Geen naam"){
+            document.querySelector("#student-list ul").appendChild(li);
+            // add class to li's "visible"
+            li.classList.add("visible");
+            // place the text inside li in a an a and add the urlArticle as href
+            li.innerHTML = `<a href="${urlArticle}">${creator}</a>`;
+        }
+
 
         // arrange names in #classes in alphabetical order
         const ul = document.querySelector("#student-list ul");
@@ -152,7 +157,8 @@ function randomIntFromInterval(min, max) {
         ul.innerHTML = "";
         ul.append(...sorted);
 
-        // build thumb nodes 
+        // build thumb nodes
+
         const thumb = document.createElement("a");
         thumb.setAttribute("href", urlArticle);
         thumb.classList.add("thumb");
@@ -162,10 +168,11 @@ function randomIntFromInterval(min, max) {
         thumb.appendChild(p);
 
         // category check
-        if (category == "kunst") h4.parentElement.classList.add("art");
-        if (category == "technologie") h4.parentElement.classList.add("tech");
-        if (category == "ontwerp") h4.parentElement.classList.add("design");
-        if (category == "ethiek") h4.parentElement.classList.add("eth");
+        if (category.toLowerCase() == "kunst") h4.parentElement.classList.add("art");
+        if (category.toLowerCase() == "technologie") h4.parentElement.classList.add("tech");
+        if (category.toLowerCase() == "ontwerp") h4.parentElement.classList.add("design");
+        if (category.toLowerCase() == "ethiek") h4.parentElement.classList.add("eth");
+
 
         // if the href of the thumb is a "#" the prevent default link behaviour
         if (thumb.getAttribute("href") == "#") {
@@ -175,11 +182,14 @@ function randomIntFromInterval(min, max) {
         }
 
         // append the first 8 thumbs to .thumb-cont-first
-        if (i < 8) {
-            document.querySelector(".thumb-cont-first").appendChild(thumb);
-        } else {
-            document.querySelector(".thumb-cont-rest").appendChild(thumb);
-        }
+        if (creator != "[[naam]]" && creator != "Geen naam"){
+            if (i < 8) {
+                document.querySelector(".thumb-cont-first").appendChild(thumb);
+            } else {
+                document.querySelector(".thumb-cont-rest").appendChild(thumb);
+            }
+        }   
+
 
         // after the 3rd thumb, add div with the class extra (for text item)
         if (i === 2) {
@@ -252,19 +262,25 @@ function randomIntFromInterval(min, max) {
     searchBtn.addEventListener("keyup", function () {
         const filter = searchBtn.value.toUpperCase();
         const li = document.querySelector("#student-list ul").getElementsByTagName("li");
+
         for (let i = 0; i < li.length; i++) {
             const txtValue = li[i].textContent || li[i].innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
 
                 // add class to li when it is visible
                 li[i].classList.add("visible");
+
+                // add class to thumb when it is visible
+
             } else {
 
                 // remove class from li when it is not visible
                 li[i].classList.remove("visible");
+   
 
             }
         }
+
         // if input has no value, show all li's
         if (searchBtn.value == "") {
             for (let i = 0; i < li.length; i++) {

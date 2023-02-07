@@ -1,0 +1,38 @@
+
+body{
+    font-family: 'ITC Clearface Std', serif;
+    font-size: 19px;
+    background: #EDEDED;
+    line-height: 1.36;
+
+    @media screen and (max-width: 780px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 420px) {
+        font-size: 12px;
+    }
+
+}
+
+h1{
+    float: left;
+    font-weight: 800;
+}
+h1, h2{
+    font-size:2.526315789473684em;
+    line-height: 1.145833333333333;
+}
+h3{
+    font-family: 'PP Agrandir', sans-serif;
+    font-size: 0.947368421052632em;
+    line-height: 1.444444444444444;
+    
+    span{
+        font-weight: bold;
+    }
+}
+
+h4{
+    font-weight: bold;
+}
