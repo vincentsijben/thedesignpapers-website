@@ -1,5 +1,7 @@
 let repos = [
     //"https://mia-mmt1-2223.github.io/final-vincentsijben/",
+    "https://mia-mmt1-2324.github.io/final-DeshisCool/",
+    "https://mia-mmt1-2324.github.io/final-mikeket/",
     "https://mia-mmt1-2223.github.io/final-Am8lie/",
     "https://mia-mmt1-2223.github.io/final-AnnaFordd/",
     "https://mia-mmt1-2223.github.io/final-BjarneLogister/",
