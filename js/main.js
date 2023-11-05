@@ -77,6 +77,7 @@ let repos = [
 "https://mia-mmt1-2324.github.io/final-ItsaBunsy/",
 "https://mia-mmt1-2324.github.io/final-lisansoupypoopy/",
 "https://mia-mmt1-2324.github.io/final-TouchGrassPlz/",
+/*
     //2022-2023
     "https://mia-mmt1-2223.github.io/final-Am8lie/",
     "https://mia-mmt1-2223.github.io/final-AnnaFordd/",
@@ -149,7 +150,7 @@ let repos = [
     "https://mia-mmt1-2223.github.io/final-Iris-Kuipers/",
     "https://mia-mmt1-2223.github.io/final-Lisabenedik/",
     "https://mia-mmt1-2223.github.io/final-SemvanderSluijs/",
-    "https://mia-mmt1-2223.github.io/final-casvanmulken/",
+    "https://mia-mmt1-2223.github.io/final-casvanmulken/",*/
 ]
 
 //global vars
@@ -157,6 +158,12 @@ const container = document.querySelector('#thumb-wrapper');
 
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function stringToHTML (text) {
+	let parser = new DOMParser();
+	let doc = parser.parseFromString(text, 'text/html');
+    return doc.head;
 }
 
 (async () => {
@@ -169,25 +176,23 @@ function randomIntFromInterval(min, max) {
         try {
             promise = await fetch(repo);
             data = await promise.text();
+            data = stringToHTML(data);
         } catch (error) {
             //skip this repo, don't show students that didn't submit
             continue;
         }
-
         
         // build loop vars
-        const text = data;
-        const html = document.createElement("html");
-        html.innerHTML = text;
+        let html = data;
 
-        const url = html.querySelector('meta[name="twitter:site"]')?.getAttribute("content") || "";
         const urlArticle = html.querySelector('meta[name="twitter:article:url"]')?.getAttribute("content") || "#";
         const category = html.querySelector('meta[name="twitter:category"]')?.getAttribute("content") || "Geen categorie";
         const creator = html.querySelector('meta[name="twitter:creator"]')?.getAttribute("content") || "Geen naam";
         const title = html.querySelector('meta[name="twitter:title"]')?.getAttribute("content") || "";
-        const rndInt = randomIntFromInterval(20, 60)
-        const image = html.querySelector('meta[name="twitter:image"]')?.getAttribute("content") || `https://generative-placeholders.glitch.me/image?width=900&height=900&style=cellular-automata&cells=${rndInt}`;
-
+        const rndImage = `https://generative-placeholders.glitch.me/image?width=900&height=900&style=cellular-automata&cells=${randomIntFromInterval(20, 60)}`;
+        let image = html.querySelector('meta[name="twitter:image"]')?.getAttribute("content") || rndImage;
+        if (image.includes("[[")) image = rndImage;
+        
         // //img
         const img = document.createElement("img");
         img.setAttribute("src", image);
@@ -196,7 +201,7 @@ function randomIntFromInterval(min, max) {
         // if image is not found, use placeholder
         img.onerror = function () {
             this.onerror = null;
-            this.src = 'https://generative-placeholders.glitch.me/image?width=900&height=900&style=cellular-automata&cells=' + rndInt;
+            this.src = rndImage;
         }
 
         // // h4 category
