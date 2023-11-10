@@ -45,7 +45,7 @@ let repos = [
 "https://mia-mmt1-2324.github.io/final-liamgrnjc/",
 "https://mia-mmt1-2324.github.io/final-liekegulpen/",
 "https://mia-mmt1-2324.github.io/final-ChickyRooster/",
-"https://mia-mmt1-2324.github.io/final-tijn-jussen/",
+"https://mia-mmt1-2324.github.io/final-Tijn-jussen/",
 "https://mia-mmt1-2324.github.io/final-meike171006/",
 "https://mia-mmt1-2324.github.io/final-LynnKoten123/",
 "https://mia-mmt1-2324.github.io/final-MatsLindelauf/",
