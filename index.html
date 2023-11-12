@@ -62,6 +62,15 @@
 
     </main>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Generate a unique version using the current timestamp
+        const version = new Date().getTime();
+
+        // Append the version to the script source
+        const script = document.createElement('script');
+        script.src = 'js/main.js?version=' + version;
+        document.body.appendChild(script);
+    </script>
+    
 </body>
 </html>
