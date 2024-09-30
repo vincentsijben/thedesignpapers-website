@@ -24,6 +24,7 @@
     cursor: pointer;
     display: block;
     text-align: center;
+    background-color: white;
 
     &.filter-button{
         border: 1px solid var(--main-black);
@@ -39,6 +40,11 @@
             transform: translate(-50%, -50%);
             width: 100%;
             padding: 0 20px
+        }
+
+        &.filter-button-small{
+            height: 46px;
+            width: 130px;
         }
     }
 }
@@ -63,34 +69,56 @@ header{
     position: relative;
     margin-bottom: 8em !important;
 
-    #logo{
-        width: var(--logo-width);
-        position: absolute;
-        left: calc((-1 * var(--logo-width)) - var(--logo-margin));
-        @media screen and (max-width: 1900px) {
-            left:var(--body-padding);
-        }
+    > .container-flex{
+        justify-content: space-between;
+        gap: 1rem;
+        margin: 3em 0 6em;
+
         @media screen and (max-width: 640px) {
-            position: relative;
-            left:0;
-            margin-top: 4em;
+            flex-direction: column;
+            align-items: normal;
+            gap: 2em;
+            margin: 3em 0 3em;
         }
     }
+
+    #logo{
+        width: var(--logo-width);
+
+        // position: absolute;
+        // left: calc((-1 * var(--logo-width)) - var(--logo-margin));
+        // @media screen and (max-width: 1900px) {
+        //     left:var(--body-padding);
+        // }
+        // @media screen and (max-width: 640px) {
+        //     position: relative;
+        //     left:0;
+        //     margin-top: 4em;
+        // }
+    }
+
     h3{
-        margin: 3em 0 6em;
+        // margin: 3em 0 6em;
+
         text-align: center;
+        
         span{
             display: block;
         }
-        @media screen and (max-width: 1900px) {
-            margin-left: calc(var(--logo-width) + var(--logo-margin));
-            width: calc(100% - (var(--logo-width) + var(--logo-margin)));
-        }
+
         @media screen and (max-width: 640px) {
-            margin: 1em 0 3em;
             text-align: left;
-            width: 100%;
         }
+
+        // @media screen and (max-width: 1900px) {
+        //     margin-left: calc(var(--logo-width) + var(--logo-margin));
+        //     width: calc(100% - (var(--logo-width) + var(--logo-margin)));
+        // }
+        // @media screen and (max-width: 640px) {
+        //     margin: 1em 0 3em;
+        //     text-align: left;
+        //     width: 100%;
+        // }
     }
     h1{
         &:after{
@@ -109,15 +137,15 @@ header{
 
 
 /* filter */
-#filter{
-    margin-bottom: 6em;
+.filter{
+    margin-bottom: 5em;
     
     @media screen and (max-width: 400px) {
         display: none; 
     }
 
     /* weird ass hide 'real' checkbox */
-    input[type="checkbox"]{
+    input[type="checkbox"], input[type="radio"]{
         position: absolute;
         visibility: hidden;
         opacity: 0;
@@ -134,7 +162,15 @@ header{
         &:checked + label,  &:hover + label{
         background-color: var(--main-black);
         color: white;
-      }
+        }
+        &:disabled + label{
+            cursor:default;
+            background-color: var(--main-grey);
+        }
+        &:disabled:hover + label{
+            background: inherit;
+            color: inherit;
+        }
     }
 
     /* - */
@@ -148,22 +184,46 @@ header{
        
     }
 
-    ul{
-        display: flex;
-        gap: var(--flex-gap);
-        flex-basis: calc(100% / 5 * 4);
-       
+    &#filter-cat{
 
-        @media screen and (max-width: 900px) {
-            flex-wrap: wrap;
-            flex-basis: 100%;
-            justify-content: center;
-            gap: 10px;
+        ul{
+            display: flex;
+            gap: var(--flex-gap);
+            flex-basis: calc(100% / 5 * 4);
+        
+
+            @media screen and (max-width: 900px) {
+                flex-wrap: wrap;
+                flex-basis: 100%;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            li{
+                position: relative;
+
+            }
         }
+    }
 
-        li{
-            position: relative;
+    &#filter-year{
 
+        ul{
+            display: flex;
+            gap: var(--flex-gap);
+            flex-basis: calc(100% / 3 * 4);
+
+            @media screen and (max-width: 900px) {
+                flex-wrap: wrap;
+                flex-basis: 100%;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            li{
+                position: relative;
+
+            }
         }
     }
     

@@ -2,7 +2,7 @@
 body{
     font-family: 'ITC Clearface Std', serif;
     font-size: 19px;
-    background: #EDEDED;
+    background: var(--main-grey);
     line-height: 1.36;
 
     @media screen and (max-width: 780px) {

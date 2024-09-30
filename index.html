@@ -13,14 +13,17 @@
 </head>
 <body>
     <header class="container-grid container-padding">
+        <div class="container-flex">
             <img id="logo" src="assets/mia-logo.svg" alt="Maastricht Institute of Farts">
-            <h3><span>7 november 2022</span> Verzameld eindwerk periode 1.1 van studenten Communication & Multimedia Design / Zuyd Hogeschool </h3>
-            <h1>The Design Papers</h1>
-            <h2>Een verzameling artikelen over betekenisvol ontwerpen. Vier thema’s zijn onderzocht door 1e jaars studenten Communication en Multimedia Design, Zuyd Hogeschool Maastricht. Hun eerste uitdaging in het doen van onderzoek, het maken van content en het ontwerpen en ontwikkelen van een digitaal medium. Op weg naar een designtoekomst.</h2>
+            <h3>Verzameld eindwerk periode 1.1 van studenten Communication & Multimedia Design / Zuyd Hogeschool </h3>
+        </div>  
+        
+        <h1>The Design Papers</h1>
+        <h2>Een verzameling artikelen over betekenisvol ontwerpen. Vier thema’s zijn onderzocht door 1e jaars studenten Communication en Multimedia Design, Zuyd Hogeschool Maastricht. Hun eerste uitdaging in het doen van onderzoek, het maken van content en het ontwerpen en ontwikkelen van een digitaal medium. Op weg naar een designtoekomst.</h2>
     </header>
 
     <main>
-        <div id="filter" class="container-grid container-flex container-padding">
+        <div id="filter-cat" class="container-grid container-flex container-padding filter">
             <h3>Kies categorie</h3>
             <ul>
                 
@@ -42,6 +45,29 @@
                 </li>   
                 </ul>
         </div>
+
+        <div id="filter-year" class="container-grid container-flex container-padding filter">
+            <h3>Kies studiejaar</h3>
+            <ul>
+                <li>
+                    <input disabled type="radio" name="filter" value="2024" id="filter-2024">
+                    <label class="btn filter-button filter-button-small" for="filter-2024"><span>2024</span></label>
+                </li>
+                
+                <li>
+                    <input checked type="radio" name="filter" value="2023" id="filter-2023">
+                    <label  class="btn filter-button filter-button-small" for="filter-2023"><span>2023</span></label>
+                </li>
+
+                <li>
+                    <input type="radio" name="filter" value="2022" id="filter-2022">
+                    <label class="btn filter-button filter-button-small" for="filter-2022"><span>2022</span></label>
+                </li>
+                
+                
+            </ul>
+        </div>
+        
         <div id="search" class="container-grid container-flex container-padding">
             
             <input type="text" id="search-btn" placeholder="Zoek op naam van student">
@@ -55,6 +81,7 @@
                 <!-- <li><a href="#">Student naam</a></li> -->
             </ul>
         </div>
+        
         <div id="thumb-wrapper"> 
             <div class="thumb-cont thumb-cont-first container-grid container-flex container-padding"></div>
             <div class="thumb-cont thumb-cont-rest container-grid container-flex container-padding"></div>
