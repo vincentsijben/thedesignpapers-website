@@ -140,9 +140,7 @@ header{
 .filter{
     margin-bottom: 5em;
     
-    // @media screen and (max-width: 400px) {
-    //     display: none; 
-    // }
+   
 
     /* weird ass hide 'real' checkbox */
     input[type="checkbox"], input[type="radio"]{
@@ -185,6 +183,10 @@ header{
     }
 
     &#filter-cat{
+
+         @media screen and (max-width: 400px) {
+            display: none; 
+        }
 
         ul{
             display: flex;
