@@ -1,4 +1,4 @@
-let repos = [
+let repo_2023 = [
     //"https://mia-mmt1-2223.github.io/final-vincentsijben/",
 "https://mia-mmt1-2324.github.io/final-jakuhbus/",
 "https://mia-mmt1-2324.github.io/final-NightFlower00/",
@@ -77,7 +77,10 @@ let repos = [
 "https://mia-mmt1-2324.github.io/final-ItsaBunsy/",
 "https://mia-mmt1-2324.github.io/final-lisansoupypoopy/",
 "https://mia-mmt1-2324.github.io/final-TouchGrassPlz/",
-/*
+
+]
+
+let repo_2022 = [ 
     //2022-2023
     "https://mia-mmt1-2223.github.io/final-Am8lie/",
     "https://mia-mmt1-2223.github.io/final-AnnaFordd/",
@@ -150,11 +153,42 @@ let repos = [
     "https://mia-mmt1-2223.github.io/final-Iris-Kuipers/",
     "https://mia-mmt1-2223.github.io/final-Lisabenedik/",
     "https://mia-mmt1-2223.github.io/final-SemvanderSluijs/",
-    "https://mia-mmt1-2223.github.io/final-casvanmulken/",*/
+    "https://mia-mmt1-2223.github.io/final-casvanmulken/"
 ]
+
+// Create the object containing the arrays
+// NEEDS TO BE DYNMAICALLY GENERATED
+let repos = {
+    repo_2022: repo_2022,
+    repo_2023: repo_2023
+};
 
 //global vars
 const container = document.querySelector('#thumb-wrapper');
+
+// get current and last year
+let currentyear = new Date().getFullYear();
+let lastYear = currentyear - 1;
+let year = lastYear;
+let repo_year = "repo_" + year;
+
+// call the updateThumbnails function with the repo_year at start
+updateThumbnails(repo_year);
+
+// check which radiobutton is active in filter-year
+document.querySelector("#filter-year").addEventListener("change", function() {
+    const radios = document.querySelectorAll("#filter-year input[type=radio]:checked");
+    for (let i = 0; i < radios.length; i++) {
+        year = radios[i].value;
+        repo_year = "repo_" + year;
+
+        updateThumbnails(repo_year);
+
+    }
+});
+
+
+
 
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -166,10 +200,26 @@ function stringToHTML (text) {
     return doc.head;
 }
 
-(async () => {
+async function updateThumbnails(repo_year) {
+    // remove old stuff when calling update
+    document.querySelectorAll('.thumb-cont-first, .thumb-cont-rest, #student-list ul, .image-wrap').forEach(element => {
+        if (element.classList.contains('image-wrap')) {
+            element.remove();
+        } else {
+            element.innerHTML = '';
+        }
+    });
+
+    // reset the search input and the cat checkboxes
+    document.querySelector("#search-btn").value = "";
+    document.querySelectorAll("#filter-cat input[type=checkbox]:checked").forEach(checkbox => {
+        checkbox.checked = false;
+    });
+    
 
     let i = 0;
-    for (let repo of repos) {
+
+    for (let repo of repos[repo_year]) {
         
         let promise;
         let data;
@@ -372,10 +422,10 @@ function stringToHTML (text) {
         }
     });
 
-    // when a checkbox in #filter is checked compare the value of the checked checkbox with one of the classes in all the .thumb. Only show .thumb's that have the same class as the checked checkbox
-    const filter = document.querySelector("#filter");
+    // when a checkbox in #filter-cat is checked compare the value of the checked checkbox with one of the classes in all the .thumb. Only show .thumb's that have the same class as the checked checkbox
+    const filter = document.querySelector("#filter-cat");
     filter.addEventListener("change", function () {
-        const checkboxes = document.querySelectorAll("#filter input[type=checkbox]:checked");
+        const checkboxes = document.querySelectorAll("#filter-cat input[type=checkbox]:checked");
         const thumbs = document.querySelectorAll(".thumb");
         for (let i = 0; i < thumbs.length; i++) {
             thumbs[i].classList.add("hidden");
@@ -389,7 +439,7 @@ function stringToHTML (text) {
     );
     // if no checkbox is checked, show all .thumb's
     filter.addEventListener("change", function () {
-        const checkboxes = document.querySelectorAll("#filter input[type=checkbox]:checked");
+        const checkboxes = document.querySelectorAll("#filter-cat input[type=checkbox]:checked");
         const thumbs = document.querySelectorAll(".thumb");
         if (checkboxes.length == 0) {
             for (let i = 0; i < thumbs.length; i++) {
@@ -402,6 +452,6 @@ function stringToHTML (text) {
 
 
 
-})()
+} // end updateThumbnails
 
 
