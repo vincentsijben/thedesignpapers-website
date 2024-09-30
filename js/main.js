@@ -1,194 +1,57 @@
-let repo_2023 = [
-    //"https://mia-mmt1-2223.github.io/final-vincentsijben/",
-"https://mia-mmt1-2324.github.io/final-jakuhbus/",
-"https://mia-mmt1-2324.github.io/final-NightFlower00/",
-"https://mia-mmt1-2324.github.io/final-DeshisCool/",
-"https://mia-mmt1-2324.github.io/final-Flupke2508/",
-"https://mia-mmt1-2324.github.io/final-Drukkie/",
-"https://mia-mmt1-2324.github.io/final-mikeket/",
-"https://mia-mmt1-2324.github.io/final-MichelleKerkhofs/",
-"https://mia-mmt1-2324.github.io/final-Hurmkuh/",
-"https://mia-mmt1-2324.github.io/final-Quacey98/",
-"https://mia-mmt1-2324.github.io/final-GreenFoxLady/",
-"https://mia-mmt1-2324.github.io/final-ChrisMertz/",
-"https://mia-mmt1-2324.github.io/final-EnricoMiesen/",
-"https://mia-mmt1-2324.github.io/final-daphneschilperoort/",
-"https://mia-mmt1-2324.github.io/final-Hester321/",
-"https://mia-mmt1-2324.github.io/final-ezraswinney/",
-"https://mia-mmt1-2324.github.io/final-KingHippo32/",
-"https://mia-mmt1-2324.github.io/final-It5MeAron/",
-"https://mia-mmt1-2324.github.io/final-QuinnvTh/",
-"https://mia-mmt1-2324.github.io/final-MaxWeening/",
-"https://mia-mmt1-2324.github.io/final-shanicewijnans/",
-"https://mia-mmt1-2324.github.io/final-IsaBekkerss/",
-"https://mia-mmt1-2324.github.io/final-wescoumans/",
-"https://mia-mmt1-2324.github.io/final-Pietersos420/",
-"https://mia-mmt1-2324.github.io/final-Luc34521/",
-"https://mia-mmt1-2324.github.io/final-MIAWoutheut/",
-"https://mia-mmt1-2324.github.io/final-JobJacobs05/",
-"https://mia-mmt1-2324.github.io/final-baskelleners/",
-"https://mia-mmt1-2324.github.io/final-TimKlaessens/",
-"https://mia-mmt1-2324.github.io/final-GuyLamkin/",
-"https://mia-mmt1-2324.github.io/final-Miquellosada/",
-"https://mia-mmt1-2324.github.io/final-LezanneN/",
-"https://mia-mmt1-2324.github.io/final-MartijnPhilips/",
-"https://mia-mmt1-2324.github.io/final-imrezuyd/",
-"https://mia-mmt1-2324.github.io/final-yentesparla/",
-"https://mia-mmt1-2324.github.io/final-SamSteens/",
-"https://mia-mmt1-2324.github.io/final-DePaulStevens/",
-"https://mia-mmt1-2324.github.io/final-TygoUbbink/",
-"https://mia-mmt1-2324.github.io/final-daanfromice/",
-"https://mia-mmt1-2324.github.io/final-JesseVoncken/",
-"https://mia-mmt1-2324.github.io/final-Winstonyang1/",
-"https://mia-mmt1-2324.github.io/final-EvyDonners/",
-"https://mia-mmt1-2324.github.io/final-Isaigerbecks/",
-"https://mia-mmt1-2324.github.io/final-liamgrnjc/",
-"https://mia-mmt1-2324.github.io/final-liekegulpen/",
-"https://mia-mmt1-2324.github.io/final-ChickyRooster/",
-"https://mia-mmt1-2324.github.io/final-Tijn-jussen/",
-"https://mia-mmt1-2324.github.io/final-meike171006/",
-"https://mia-mmt1-2324.github.io/final-LynnKoten123/",
-"https://mia-mmt1-2324.github.io/final-MatsLindelauf/",
-"https://mia-mmt1-2324.github.io/final-JarnoMeijers/",
-"https://mia-mmt1-2324.github.io/final-TwanMevissen/",
-"https://mia-mmt1-2324.github.io/final-random-dev-sam/",
-"https://mia-mmt1-2324.github.io/final-RickPalmen/",
-"https://mia-mmt1-2324.github.io/final-UsernameMassi/",
-"https://mia-mmt1-2324.github.io/final-F-Reijnen/",
-"https://mia-mmt1-2324.github.io/final-Frederique19/",
-"https://mia-mmt1-2324.github.io/final-coen566/",
-"https://mia-mmt1-2324.github.io/final-spijkerst/",
-"https://mia-mmt1-2324.github.io/final-DoriekeSterk/",
-"https://mia-mmt1-2324.github.io/final-DaanvanD/",
-"https://mia-mmt1-2324.github.io/final-davidvonk/",
-"https://mia-mmt1-2324.github.io/final-mahaddebom/",
-"https://mia-mmt1-2324.github.io/final-MORR15/",
-"https://mia-mmt1-2324.github.io/final-DucodenietJong/",
-"https://mia-mmt1-2324.github.io/final-roomiebotanical/",
-"https://mia-mmt1-2324.github.io/final-Lieke04/",
-"https://mia-mmt1-2324.github.io/final-BradleyHafmans/",
-"https://mia-mmt1-2324.github.io/final-TessaJanzen/",
-"https://mia-mmt1-2324.github.io/final-Stroopwafell/",
-"https://mia-mmt1-2324.github.io/final-ducky128/",
-"https://mia-mmt1-2324.github.io/final-maximalesupergirl/",
-"https://mia-mmt1-2324.github.io/final-levitos/",
-"https://mia-mmt1-2324.github.io/final-Artoerr/",
-"https://mia-mmt1-2324.github.io/final-marynschmits/",
-"https://mia-mmt1-2324.github.io/final-ItsaBunsy/",
-"https://mia-mmt1-2324.github.io/final-lisansoupypoopy/",
-"https://mia-mmt1-2324.github.io/final-TouchGrassPlz/",
-
-]
-
-let repo_2022 = [ 
-    //2022-2023
-    "https://mia-mmt1-2223.github.io/final-Am8lie/",
-    "https://mia-mmt1-2223.github.io/final-AnnaFordd/",
-    "https://mia-mmt1-2223.github.io/final-BjarneLogister/",
-    "https://mia-mmt1-2223.github.io/final-Hamid9x/",
-    "https://mia-mmt1-2223.github.io/final-MAmory1A/",
-    "https://mia-mmt1-2223.github.io/final-kevintnstr/",
-    "https://mia-mmt1-2223.github.io/final-ChaniceMertens/",
-    "https://mia-mmt1-2223.github.io/final-Jampot043/",
-    "https://mia-mmt1-2223.github.io/final-RaoulVriezelaar/",
-    "https://mia-mmt1-2223.github.io/final-2205105hassoun/",
-    "https://mia-mmt1-2223.github.io/final-robinselen/",
-    "https://mia-mmt1-2223.github.io/final-T-Schm1t/",
-    "https://mia-mmt1-2223.github.io/final-RenskeR/",
-    "https://mia-mmt1-2223.github.io/final-TrenLeclaire/",
-    "https://mia-mmt1-2223.github.io/final-rianneoosterhuis/",
-    "https://mia-mmt1-2223.github.io/final-PimBr/",
-    "https://mia-mmt1-2223.github.io/final-Manar54/",
-    "https://mia-mmt1-2223.github.io/final-BlackAirforce1sX/",
-    "https://mia-mmt1-2223.github.io/final-semschlosser/",
-    "https://mia-mmt1-2223.github.io/final-RobinPotthoff/",
-    "https://mia-mmt1-2223.github.io/final-semueljanssen/",
-    "https://mia-mmt1-2223.github.io/final-EviZeelen/",
-    "https://mia-mmt1-2223.github.io/final-BassGoossens/",
-    "https://mia-mmt1-2223.github.io/final-Teun-Koolen/",
-    "https://mia-mmt1-2223.github.io/final-evidirckx/",
-    "https://mia-mmt1-2223.github.io/final-Clim-Bongers/",
-    "https://mia-mmt1-2223.github.io/final-BoHoffmanns/",
-    "https://mia-mmt1-2223.github.io/final-Jurgenjws/",
-    "https://mia-mmt1-2223.github.io/final-FerryBa/",
-    "https://mia-mmt1-2223.github.io/final-RikNacken/",
-    "https://mia-mmt1-2223.github.io/final-McSwordsman/",
-    "https://mia-mmt1-2223.github.io/final-TibbeMoes/",
-    "https://mia-mmt1-2223.github.io/final-Jojopro56/",
-    "https://mia-mmt1-2223.github.io/final-StanRuber/",
-    "https://mia-mmt1-2223.github.io/final-chloedejong/",
-    "https://mia-mmt1-2223.github.io/final-BrentFijneman/",
-    "https://mia-mmt1-2223.github.io/final-Wlipsch/",
-    "https://mia-mmt1-2223.github.io/final-JVLXS/",
-    "https://mia-mmt1-2223.github.io/final-Kimlimp/",
-    "https://mia-mmt1-2223.github.io/final-Armoooeee/",
-    "https://mia-mmt1-2223.github.io/final-maudmooren/",
-    "https://mia-mmt1-2223.github.io/final-TeundeGouw/",
-    "https://mia-mmt1-2223.github.io/final-leoniestomphorst/",
-    "https://mia-mmt1-2223.github.io/final-RomanPijls/",
-    "https://mia-mmt1-2223.github.io/final-Feemiessen/",
-    "https://mia-mmt1-2223.github.io/final-fleurdejong/",
-    "https://mia-mmt1-2223.github.io/final-KendraDriessen/",
-    "https://mia-mmt1-2223.github.io/final-MichJaegers/",
-    "https://mia-mmt1-2223.github.io/final-Noah0D/",
-    "https://mia-mmt1-2223.github.io/final-Elyadore/",
-    "https://mia-mmt1-2223.github.io/final-JenniferStijfs/",
-    "https://mia-mmt1-2223.github.io/final-daphneschilperoort/",
-    "https://mia-mmt1-2223.github.io/final-DasCicada/",
-    "https://mia-mmt1-2223.github.io/final-UncleJoe21/",
-    "https://mia-mmt1-2223.github.io/final-JR-vanderLinden/",
-    "https://mia-mmt1-2223.github.io/final-julieheuff/",
-    "https://mia-mmt1-2223.github.io/final-FabriceBrandts/",
-    "https://mia-mmt1-2223.github.io/final-DaphneWehrens/",
-    "https://mia-mmt1-2223.github.io/final-meikespapens/",
-    "https://mia-mmt1-2223.github.io/final-admyre/",
-    "https://mia-mmt1-2223.github.io/final-ajaesmail/",
-    "https://mia-mmt1-2223.github.io/final-Bingvanrooij/",
-    "https://mia-mmt1-2223.github.io/final-DriekvanderMeulen/",
-    "https://mia-mmt1-2223.github.io/final-Tallon-IVI/",
-    "https://mia-mmt1-2223.github.io/final-Tuurintzand/",
-    "https://mia-mmt1-2223.github.io/final-LaurynWalpole/",
-    "https://mia-mmt1-2223.github.io/final-semdv/",
-    "https://mia-mmt1-2223.github.io/final-Jorgos-Intemann/",
-    "https://mia-mmt1-2223.github.io/final-Iris-Kuipers/",
-    "https://mia-mmt1-2223.github.io/final-Lisabenedik/",
-    "https://mia-mmt1-2223.github.io/final-SemvanderSluijs/",
-    "https://mia-mmt1-2223.github.io/final-casvanmulken/"
-]
-
-// Create the object containing the arrays
-// NEEDS TO BE DYNMAICALLY GENERATED
-let repos = {
-    repo_2022: repo_2022,
-    repo_2023: repo_2023
-};
-
 //global vars
 const container = document.querySelector('#thumb-wrapper');
 
 // get current and last year
 let currentyear = new Date().getFullYear();
 let lastYear = currentyear - 1;
-let year = lastYear;
-let repo_year = "repo_" + year;
 
-// call the updateThumbnails function with the repo_year at start
-updateThumbnails(repo_year);
+// Global variable to store the JSON data
+let jsonData = {};
+
+// Fetch the JSON file
+fetch('js/repos.json')
+    .then(response => response.json())
+    .then(data => {
+        // Store the parsed data in the global variable
+        jsonData = data;
+
+        // Initialize thumbnails with the default year (e.g., the first year in the JSON data)
+        //const defaultYear = Object.keys(jsonData)[0];
+        updateThumbnails(lastYear);
+
+}).catch(error => {
+        console.error('Error fetching the JSON file:', error);
+});
+
+// Function to get URLs for a specific year
+function getUrlsForYear(year) {
+    // Find the year object in the data
+    const yearData = jsonData.find(item => item.year === year);
+    if (yearData) {
+        // Extract the URLs where active is true
+        return yearData.urls
+            .filter(urlObj => urlObj.active) // Filter URLs based on active property
+            .map(urlObj => urlObj.url); // Map to URLs
+    } else {
+        console.log(`Year ${year} not found in the data.`);
+        return [];
+    }
+}
 
 // check which radiobutton is active in filter-year
 document.querySelector("#filter-year").addEventListener("change", function() {
     const radios = document.querySelectorAll("#filter-year input[type=radio]:checked");
+   
     for (let i = 0; i < radios.length; i++) {
         year = radios[i].value;
-        repo_year = "repo_" + year;
+        
+        // year cant be a string
+        year = parseInt(year);
 
-        updateThumbnails(repo_year);
+        updateThumbnails(year);
 
     }
 });
-
-
-
 
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -200,8 +63,8 @@ function stringToHTML (text) {
     return doc.head;
 }
 
-async function updateThumbnails(repo_year) {
-    // remove old stuff when calling update
+async function updateThumbnails(year) {
+    // remove old stuff when calling update first
     document.querySelectorAll('.thumb-cont-first, .thumb-cont-rest, #student-list ul, .image-wrap').forEach(element => {
         if (element.classList.contains('image-wrap')) {
             element.remove();
@@ -215,11 +78,15 @@ async function updateThumbnails(repo_year) {
     document.querySelectorAll("#filter-cat input[type=checkbox]:checked").forEach(checkbox => {
         checkbox.checked = false;
     });
-    
 
+    
+    // lets count thumbs
     let i = 0;
 
-    for (let repo of repos[repo_year]) {
+    // Get URLs for the selected year
+    const urls = getUrlsForYear(year);
+
+    for (let repo of urls) {
         
         let promise;
         let data;
@@ -245,39 +112,65 @@ async function updateThumbnails(repo_year) {
         
         // //img
         const img = document.createElement("img");
+        img.alt = "";
+        img.src = "";
+
         img.setAttribute("src", image);
         // give img the title as alt text, when no title is available, give it the url
         img.setAttribute("alt", title || "CMD student werk");
         // if image is not found, use placeholder
         img.onerror = function () {
+            this.classList.add("img-not-found");
             this.onerror = null;
             this.src = rndImage;
         }
 
+        // Remove occurrences of [[ and ]] from the category
+        let modifiedCategory = category.replace(/\[\[|\]\]/g, "");
+
+
         // // h4 category
         const h4 = document.createElement("h4");
-        h4.innerText = category;
+        h4.innerText = modifiedCategory;
 
         // // h3 article title
         const h3 = document.createElement("h3");
-        h3.innerText = title;
+
+        // Remove occurrences of [[ and ]] from the title
+        let modifiedTitle = title.replace(/\[\[|\]\]/g, "");
+
+
+        h3.innerText = modifiedTitle;
         // add 3 dots in text when title is longer than 110 characters   
         if (h3.innerText.length > 110) {
             h3.innerText = h3.innerText.substring(0, 110) + "...";
         }
 
+        // Remove occurrences of [[ and ]] from the creator
+        let modifiedCreator = creator.replace(/\[\[|\]\]/g, "");
+
+
         // // student naam
         const p = document.createElement("p");
-        p.innerText = creator;
+        p.innerText = modifiedCreator;
 
         // place all creator names inside the li of #classes
         const li = document.createElement("li");
-        li.innerText = creator;
+        li.innerText = modifiedCreator;
 
         if (creator != "[[naam]]" && creator != "Geen naam"){
             document.querySelector("#student-list ul").appendChild(li);
             // add class to li's "visible"
             li.classList.add("visible");
+
+
+             // category check
+            if (modifiedCategory.toLowerCase() == "kunst") li.setAttribute("data-cat", "art");
+            if (modifiedCategory.toLowerCase() == "technologie") li.setAttribute("data-cat", "tech");
+            if (modifiedCategory.toLowerCase() == "ontwerp") li.setAttribute("data-cat", "design");
+            if (modifiedCategory.toLowerCase() == "ethiek") li.setAttribute("data-cat", "eth");
+
+
             // place the text inside li in a an a and add the urlArticle as href
             li.innerHTML = `<a href="${urlArticle}">${creator}</a>`;
         }
