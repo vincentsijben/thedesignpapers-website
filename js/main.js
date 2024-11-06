@@ -2,8 +2,9 @@
 const container = document.querySelector('#thumb-wrapper');
 
 // get current and last year
-let currentyear = new Date().getFullYear();
-let lastYear = currentyear - 1;
+let currentyear = 2024;
+// let currentyear = new Date().getFullYear();
+// let lastYear = currentyear - 1;
 
 // Global variable to store the JSON data
 let jsonData = {};
@@ -17,7 +18,7 @@ fetch('js/repos.json')
 
         // Initialize thumbnails with the default year (e.g., the first year in the JSON data)
         //const defaultYear = Object.keys(jsonData)[0];
-        updateThumbnails(lastYear);
+        updateThumbnails(currentyear);
 
 }).catch(error => {
         console.error('Error fetching the JSON file:', error);
