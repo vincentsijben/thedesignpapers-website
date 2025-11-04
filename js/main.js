@@ -2,7 +2,7 @@
 const container = document.querySelector('#thumb-wrapper');
 
 // get current and last year
-let currentyear = 2024;
+let currentyear = 2025;
 // let currentyear = new Date().getFullYear();
 // let lastYear = currentyear - 1;
 
