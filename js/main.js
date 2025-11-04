@@ -173,7 +173,7 @@ async function updateThumbnails(year) {
 
 
             // place the text inside li in a an a and add the urlArticle as href
-            li.innerHTML = `<a href="${urlArticle}">${creator}</a>`;
+            li.innerHTML = `<a href="${urlArticle}">${modifiedCreator}</a>`;
         }
 
 
