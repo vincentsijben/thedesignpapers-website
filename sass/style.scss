@@ -61,13 +61,19 @@
 .cat-eth{
     background: var(--cat-eth);
 }
+.cat-social{
+    background: var(--cat-social);
+}
+.cat-wild{
+    background: var(--cat-wild);
+}
 
 
 
 /* header */
 header{
     position: relative;
-    margin-bottom: 8em !important;
+    margin-bottom: 4em !important;
 
     > .container-flex{
         justify-content: space-between;
@@ -446,6 +452,14 @@ header{
     display: block;
     margin-bottom: 3.5em;
 
+    
+    border-radius: var(--btn-radius);
+
+    outline: 2px solid transparent;
+    outline-offset: 15px;
+
+    transition: ease all 600ms;
+
     &:not(.extra) {
         &:before{
             content: "";
@@ -477,6 +491,8 @@ header{
         img{
             filter: none;
         }
+        outline-offset: 24px;
+       outline: 2px solid var(--cat-social);
     }
     
 
@@ -496,15 +512,17 @@ header{
         line-height: 1;
         margin-bottom: 2em;
         text-transform: lowercase; 
+        padding-left: 34px;
         &:before{
             content: "";
             height: 21px;
             width: 21px;
             display: inline-block;
-            background: black;
+            background: var(--cat-art);
             border-radius: 50%;
             margin-right: .7em;
             margin-bottom: -5px;
+            margin-left: -30px;
         }
     }
     p{
@@ -522,26 +540,26 @@ header{
             margin-bottom: -px;
         }
     }
-    &.eth{
-        h4:before{
-                background: var(--cat-eth);
-        }
-    }
-    &.art{
-        h4:before{
-                background: var(--cat-art);
-        }
-    }
-    &.design{
-        h4:before{
-                background: var(--cat-design);
-        }
-    }
-    &.tech{
-        h4:before{
-                background: var(--cat-tech);
-        }
-    }
+    // &.eth{
+    //     h4:before{
+    //             background: var(--cat-eth);
+    //     }
+    // }
+    // &.art{
+    //     h4:before{
+    //             background: var(--cat-art);
+    //     }
+    // }
+    // &.design{
+    //     h4:before{
+    //             background: var(--cat-design);
+    //     }
+    // }
+    // &.tech{
+    //     h4:before{
+    //             background: var(--cat-tech);
+    //     }
+    // }
 }
 
 
